@@ -21,3 +21,15 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.site-main {
+	p:nth-child(1){
+		margin-left: 1rem;
+	}
+
+	p {
+		margin-left: 5rem;
+		margin-block-start: unset;
+    	margin-block-end: unset;
+	}
+}

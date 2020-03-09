@@ -50,7 +50,7 @@ get_header();
 				* wp_reset_postdata().
 				*/
 				wp_reset_postdata();
-				get_template_part('category-evenement');
+				//get_template_part('category-evenement');
 			?>
 
 		</main><!-- #main -->
