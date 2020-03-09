@@ -214,6 +214,10 @@
 #atelier h2 {
   border: 1px solid black;
   font-size: 1em;
+  -webkit-margin-before: unset;
+          margin-block-start: unset;
+  -webkit-margin-after: unset;
+          margin-block-end: unset;
 }
 
 /*--------------------------------------------------------------

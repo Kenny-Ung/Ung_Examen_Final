@@ -17,18 +17,23 @@ get_header();
 			<section id="atelier">
 			<?php
 
-			while ( have_posts() ) :
-				the_post();
+			$args2 = array(
+				"category_name" => "atelier",
+				'posts_per_page' => 16,
+				"orderby" => "date",
+				"order" => "ASC"
+			);
+			$query2 = new WP_Query( $args2 );
+
+
+			while ( $query2->have_posts() ) :
+				$query2->the_post();
 				//echo  '<p>'. get_the_date('j / m') . '</p>';
-				$jour = (int)get_the_date('j');
-				$mois = (int)get_the_date('m');
-				$mois = $mois%3+1;
-				// echo '<p>' . ($mois%3 + 1) . '</p>'; 
-				$gridArea = $jour . '/' . $mois . '/' . ($jour+1) . '/' . ($mois+1);
+				$heure = (int) substr(get_post_field('post_name'), -2, 2);
+				$formateur = (int) get_the_author_meta( 'display_name', $post->post_author );
+				$gridArea = $heure;
 				// echo '<p>' .$gridArea . '</p>' ;
-				echo '<h2>' . substr(get_the_title(), 3), get_post_field('post_name'), get_the_author().'</h2>';
-				//echo '<h2>' . substr(get_the_title(), 3), get_post_field('post_name'), get_the_author().'</h2>';
-				//echo '<h2>' . substr(get_the_title(), 3), get_post_field('post_name'), get_the_author().'</h2>';
+				echo '<h2 style="grid-area:'. $gridArea . '">' . substr(get_the_title(), 3), get_post_field('post_name'), get_the_author().'</h2>';
 			endwhile;
 			?>
         	</section>
