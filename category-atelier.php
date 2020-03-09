@@ -25,7 +25,6 @@ get_header();
 			);
 			$query2 = new WP_Query( $args2 );
 
-
 			while ( $query2->have_posts() ) :
 				$query2->the_post();
 				//echo  '<p>'. get_the_date('j / m') . '</p>';
