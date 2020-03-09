@@ -1,7 +1,7 @@
-#evenement {
+#atelier {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(31, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(11, 1fr);
     border: 1px solid black;
 
     h2 {

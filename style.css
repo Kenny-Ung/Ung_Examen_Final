@@ -201,17 +201,17 @@
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-#evenement {
+#atelier {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: (1fr)[31];
-      grid-template-rows: repeat(31, 1fr);
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: (1fr)[11];
+      grid-template-rows: repeat(11, 1fr);
   border: 1px solid black;
 }
 
-#evenement h2 {
+#atelier h2 {
   border: 1px solid black;
   font-size: 1em;
 }
